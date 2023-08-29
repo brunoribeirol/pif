@@ -1,26 +1,17 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
 
-    int numeros, senha;
+    float x1, y1, x2, y2, distancia;
 
-    senha = 2002;
+    scanf("%f %f\n %f %f", &x1, &y1, &x2, &y2);
 
-    do
-    {
-        scanf("%d", &numeros);
+    distancia = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 
-        if (numeros == senha) {
-        printf("Acesso Permitido\n");
-        }
-
-        else {
-        printf("Senha Invalida\n");
-        }
-
-    } while (numeros != 2002);
+    printf("%0.4f\n", distancia);
 
     return 0;
 }
 
-//beecrowd1114
+//beecrowd1015
