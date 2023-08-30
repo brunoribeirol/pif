@@ -2,29 +2,27 @@
 
 int main() {
 
-    int X, Y, somaImpares;
+    int X, Y, maior, menor;
 
     scanf("%d %d", &X, &Y);
 
 
-
-
-    if (X < Y)
+    if (X > Y)
     {
-        /* code */
-    }
-    
-
-    if (Y > X)
-    {
-        Y == X;
+        X = maior;
+        Y = menor;
     }
     else {
-        X == X;
+        Y = maior;
+        X = menor;
     }
 
-    somaImpares = 0
-
+    while (X > Y)
+    {
+        
+    }
+    
+    int somaImpares = 0;
 
 
     return 0;
