@@ -2,17 +2,37 @@
 
 int main() {
 
-    int numeroFuncionario, horasTrabalhadas;
-    float valorHora, salario;
+    int codigo, quantidade;
+    float preco;
 
-    scanf("%d\n", &numeroFuncionario);
-    scanf("%d\n", &horasTrabalhadas);
-    scanf("%f", &valorHora);
+    scanf("%d %d", &codigo, &quantidade);
 
-    salario = horasTrabalhadas * valorHora;
+    if (codigo == 1)
+    {
+        preco = 4.00;
+    }
+    else if (codigo == 2)
+    {
+        preco = 4.50;
+    }
+    else if (codigo == 3)
+    {
+        preco = 5.00;
+    }
+    else if (codigo == 4)
+    {
+        preco = 2.00;
+    }
+    else if (codigo == 5)
+    {
+        preco = 1.50;
+    }
 
-    printf("NUMBER = %d\n", numeroFuncionario);
-    printf("SALARY = U$ %.2f\n", salario);
+    float total;
+
+    total = preco * quantidade;
+
+    printf("Total: R$ %.2f\n", total);
 
     return 0;
 }
