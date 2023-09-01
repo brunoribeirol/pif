@@ -1,10 +1,13 @@
-#include <stdio.h>
+# include <stdio.h>
 
 int main() {
 
-    int X, Y, maior, menor;
+    int X, Y;
 
-    scanf("%d %d", &X, &Y);
+    scanf("%d", &X);
+    scanf("%d", &Y);
+
+    int maior, menor;
 
     if (X > Y)
     {
@@ -15,32 +18,20 @@ int main() {
         maior = Y;
         menor = X;
     }
+    
+    int i, somaImpares;
 
-    int i, somaImpares = 0;
+    somaImpares = 0;
 
-    for (i = menor; i < maior; i++)
+    for (i = menor + 1; i < maior; i++)
     {
         if (i % 2 == 1)
         {
-            somaImpares = somaImpares + i;
+            somaImpares += i;
         }
     }
 
     printf("%d\n", somaImpares);
-
+    
     return 0;
 }
-
-/*
-    for (i = menor + 1; i < maior; i++) {
-        if (i % 2 == 1) {
-            somaImpares = somaImpares + i;
-        }
-    }
-
-    printf("%d\n", somaImpares);
-
-    return 0;
-}
-*/
-

@@ -1,3 +1,5 @@
+//VARIÁVEIS E OPERAÇÕES
+
 #include <stdio.h>
 
 int main() {
