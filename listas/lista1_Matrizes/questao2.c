@@ -61,7 +61,6 @@ int main() {
         //MatrizGC
     int matrizGC[G][C]; //[G][M] x [M][C] = [G][C]; coluna da 1 x linha da 2
 
-
     for (int i = 0; i < G; i++)
     {
         for (int j = 0; j < C; j++)

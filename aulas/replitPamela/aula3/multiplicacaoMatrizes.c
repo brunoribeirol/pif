@@ -17,7 +17,7 @@ int main() {
         {9, 11, 2}
     };
 
-    int C
+    int C;
 
 
     return 0;
