@@ -5,6 +5,7 @@ o índice na funcao, caso nao estivesse presente retornava -1*/
 int strch(char *str, char ch) {
 
     int tamanho = strlen(str); //acho que nao coloquei o tipo int da variavel
+    
     for (int i = 0; i < tamanho; i++)
     {
         if (str[i] == ch)
@@ -19,7 +20,9 @@ int strch(char *str, char ch) {
 }
 
 //Como era pra ter feito
-int strch(char *str, char ch) {
+int strch(char *str, char ch)
+{
+
     int tamanho = strlen(str);
     
     for (int i = 0; i < tamanho; i++) {
