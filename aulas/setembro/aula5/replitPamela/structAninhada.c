@@ -1,3 +1,5 @@
+//STRUCT ANINHADA (NESTED)
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -39,10 +41,10 @@ int main(void)
 
     printf("Distancia eunclidiana igual a %.3f \n", dist);
 
-    altura = abs(pt.y - maxpt.y);
+    altura = abs(pt.y - maxpt.y); //abs é o valor absoluto (sempre positivo)
     base = abs(pt.x - maxpt.x);
 
-    printf("Area do retangulo construido = %d\n", altura*base);
+    printf("Area do retangulo construido = %d\n", altura * base);
 
 
     return 0;

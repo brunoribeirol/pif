@@ -1,3 +1,5 @@
+//ENUMERATIONS
+
 #include <stdio.h>
 
 int main()

@@ -1,3 +1,5 @@
+//STRUCT FUNÇÃO
+
 #include <stdio.h>
 #include <stdlib.h>
 
