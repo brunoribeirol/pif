@@ -11,11 +11,11 @@ int main()
         int pessoasGrupo; //numero de pessoas no grupo;
         scanf("%d", &pessoasGrupo);
 
-        char primeiroIdioma[21]; //idioma pelo primeiro usuario; minimo 1 maximo 20; seriam 20 mas tem o \0; utilizado aqui para comparar str depois
+        char primeiroIdioma[21]; //idioma pelo primeiro usuario; minimo 1 maximo 20; seriam 20 mas tem o \0; utilizado aqui para str comparar depois
 
         scanf("%s", primeiroIdioma); //lê o idioma do primeiro usuário
 
-        int mesmoIdioma = 0; //ninguem fala o mesmo idioma
+        int mesmoIdioma = 1; //todos falam o mesmo idioma
 
         for (int j = 1; j < pessoasGrupo; j++) //j = 1 porque eu já li o primeiro idioma em cima
         {
@@ -25,13 +25,16 @@ int main()
 
             if (strcmp(primeiroIdioma, idiomas) != 0)
             {
-                mesmoIdioma++;
+                mesmoIdioma = 0; //pelo menos alguém fala um idioma diferente
             }    
         }
 
-        if (mesmoIdioma == 0) {
-            printf("%s\n", primeiroIdioma); //todas as pessoas falam o mesmo idioma
-        } else {
+        if (mesmoIdioma) //todos falam o mesmo idioma
+        {
+            printf("%s\n", primeiroIdioma);
+        } 
+        else
+        {
             printf("ingles\n"); //pelo menos uma pessoa fala um idioma diferente
         }
         
