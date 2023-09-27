@@ -3,39 +3,39 @@
 
 int main()
 {
-    int testes; //numero de testes
-    scanf("%d", &testes);
+    int testCases; // Number of test cases
+    scanf("%d", &testCases);
 
-    for (int i = 0; i < testes; i++)
+    for (int i = 0; i < testCases; i++)
     {
-        int pessoasGrupo; //numero de pessoas no grupo;
-        scanf("%d", &pessoasGrupo);
+        int group; // Number of people in the group
+        scanf("%d", &group);
 
-        char primeiroIdioma[21]; //idioma pelo primeiro usuario; minimo 1 maximo 20; seriam 20 mas tem o \0; utilizado aqui para str comparar depois
+        char firstLanguage[21]; // Language spoken by the first user; minimum 1, maximum 20 characters (plus '\0'); used here for string comparison later
 
-        scanf("%s", primeiroIdioma); //lê o idioma do primeiro usuário
+        scanf("%s", firstLanguage); // Read the language of the first user
 
-        int mesmoIdioma = 1; //todos falam o mesmo idioma
+        int sameLanguage = 1; // Everyone speaks the same language
 
-        for (int j = 1; j < pessoasGrupo; j++) //j = 1 porque eu já li o primeiro idioma em cima
+        for (int j = 1; j < group; j++) // Start from j = 1 because we've already read the first language above
         {
-            char idiomas[21];
+            char languages[21];
 
-            scanf("%s", idiomas);
+            scanf("%s", languages);
 
-            if (strcmp(primeiroIdioma, idiomas) != 0)
+            if (strcmp(firstLanguage, languages) != 0)
             {
-                mesmoIdioma = 0; //pelo menos alguém fala um idioma diferente
+                sameLanguage = 0; // At least someone speaks a different language
             }    
         }
 
-        if (mesmoIdioma) //todos falam o mesmo idioma
+        if (sameLanguage) // Everyone speaks the same language
         {
-            printf("%s\n", primeiroIdioma);
+            printf("%s\n", firstLanguage);
         } 
         else
         {
-            printf("ingles\n"); //pelo menos uma pessoa fala um idioma diferente
+            printf("ingles\n"); // At least one person speaks a different language
         }
         
     }
