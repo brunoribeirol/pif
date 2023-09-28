@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct book
 {
@@ -14,6 +15,15 @@ int main()
     printf("Title: %s\n", myBook.title);
     printf("Author: %s\n", myBook.author);
     printf("Year: %d\n", myBook.year);
+
+    /* 
+    book Mybook;
+    strcpy(myBook.title, "Django Tutorial");
+    printf("Title: %s\n", myBook.title);
+
+    myBook.year = 1925;
+    */
+   
 
     return 0;
 }
