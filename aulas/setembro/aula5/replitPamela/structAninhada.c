@@ -4,18 +4,18 @@
 #include <math.h>
 #include <stdlib.h>
 
-struct point
+typedef struct
 {
     int x;
     int y;
-};
+} point;
 
 //struct aninhada
-struct rect 
+typedef struct
 { 
-    struct point p1;
-    struct point p2;
-};
+    point p1;
+    point p2;
+} rect;
 
 int max_x = 100; //variaveis globais definindo 
 int max_y = 100; // pontos maximos possiveis no plano
@@ -23,9 +23,9 @@ int max_y = 100; // pontos maximos possiveis no plano
 int main(void)
 {
 
-    struct point pt;
-    struct point maxpt = {4,3};
-    struct rect screen;
+    point pt;
+    point maxpt = {4,3};
+    rect screen;
     int altura, base, area;
     double dist; //distancia euclidiana dos dois pontos 
 

@@ -3,41 +3,40 @@
 #include<stdio.h>
 #include<string.h>
 #define MAX 5
-#define COUNT 10
 
-struct student
+typedef struct
 {
     char name[20];
-    int roll_no;
-    float marks;
-};
+    int ID;
+    float grade;
+} student;
 
 int main()
 {
-    struct student arr_student[MAX];
+    student arrayStudent[MAX];
     int i;
 
     for(i = 0; i < MAX; i++ )
     {
-        printf("\nEnter details of student %d\n\n", i + 1);
+        printf("Enter details of student %d\n", i + 1);
         printf("Enter name: ");
-        scanf("%s", arr_student[i].name);
+        scanf("%s", arrayStudent[i].name);
 
-        printf("Enter roll no: ");
-        scanf("%d", &arr_student[i].roll_no);
+        printf("Enter your ID: ");
+        scanf("%d", &arrayStudent[i].ID);
 
-        printf("Enter marks: ");
-        scanf("%f", &arr_student[i].marks);
+        printf("Enter grade: ");
+        scanf("%f", &arrayStudent[i].grade);
+
+        printf("\n");
     }
 
-    printf("\n");
-
-    printf("Name\tRoll no\tMarks\n"); //primeira coluna da tabela
+    printf("Name\tID\tGrade\n"); //primeira coluna da tabela
 
     for(i = 0; i < MAX; i++ )
     {
         printf("%s\t %d\t %.2f\n",
-        arr_student[i].name, arr_student[i].roll_no, arr_student[i].marks);
+        arrayStudent[i].name, arrayStudent[i].ID, arrayStudent[i].grade);
     }
 
     //signal to operating system program ran fine

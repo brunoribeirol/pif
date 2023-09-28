@@ -4,54 +4,54 @@
 #include <stdlib.h>
 
 //definindo um ponto
-struct point
+typedef struct point
 {
     int x;
     int y;
-};
+} point;
 
 //definindo um retangulo
-struct rect 
+typedef struct rect 
 {
-    struct point pt1;
-    struct point pt2;
-};
+    point pt1;
+    point pt2;
+} rect;
 
 //funcao para criar um novo ponto
-struct point makepoint(int x, int y)
+point makepoint(int x, int y)
 { 
-    struct point temp;
+    point temp;
     temp.x = x;
     temp.y = y;
     return temp;
 }
 
 //funcao para criar um novo retangulo
-struct rect makescreen(struct point p1, struct point p2)
+rect makescreen(point p1, point p2)
 { 
-    struct rect temp;
+    rect temp;
     temp.pt1 = p1;
     temp.pt2 = p2;
     return temp;
 }
 
 //area do retangulo
-int area_rect(struct rect retangulo)
+int area_rect(rect retangulo)
 {
     int altura,base;
     altura = abs(retangulo.pt1.y - retangulo.pt2.y);
     base = abs(retangulo.pt1.x - retangulo.pt2.x);
 
-    return altura*base;
+    return altura * base;
 }
 
 int main(void)
 {
 
   int a, b, area; 
-  struct point pt_1, pt_2;
+  point pt_1, pt_2;
   //struct point *pp; //ponteiro do tipo struct
-  struct rect retangulo;
+  rect retangulo;
 
   printf("Digite as coordenadas do primeiro ponto\n");
   scanf("%d %d", &a, &b);

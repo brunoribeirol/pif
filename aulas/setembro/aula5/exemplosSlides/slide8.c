@@ -1,30 +1,43 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Books
+typedef struct books
 {
     char title[50];
     char author[50];
     char subject[100];
-    int bookID;
-};
+    int ID;
+} books;
 
 int main()
 {
-    struct Books Book1; //Declare Book1 of type Book
-    struct Books Book2; //Declare Book2 of type Book
 
     //book1 specification
-    strcpy(Book1.title, "C Programming");
-    strcpy(Book1.author, "Nuha Ali");
-    strcpy(Book1.subject, "C Programming Tutorial");
-    Book1.bookID = 6495407;
+    books book1 = {"C Programming", "Nuha Ali", "C Programming Tutorial", 6495407};
+
+    printf("BOOK 1\n");
+
+    printf("%s\n", book1.title);
+    printf("%s\n", book1.author);
+    printf("%s\n", book1.subject);
+    printf("%d\n", book1.ID);
+
+    printf("\n");
+
+    books book2; //Declare book2 of type Book
 
     //book2 specification
-    strcpy(Book1.title, "Telecom Billing");
-    strcpy(Book1.author, "Zara Ali");
-    strcpy(Book1.subject, "Telecom Billing Tutorial");
-    Book1.bookID = 6495700;
+    strcpy(book2.title, "Telecom Billing");
+    strcpy(book2.author, "Zara Ali");
+    strcpy(book2.subject, "Telecom Billing Tutorial");
+    book2.ID = 6495700;
+
+    printf("BOOK 2\n");
+
+    printf("%s\n", book2.title);
+    printf("%s\n", book2.author);
+    printf("%s\n", book2.subject);
+    printf("%d\n", book2.ID);
 
     return 0;
 }
