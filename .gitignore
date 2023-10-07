@@ -1,0 +1,7 @@
+# Ignorar arquivos executáveis gerados
+*.exe
+*.out
+
+# Ignorar arquivos objeto gerados
+*.o
+*.obj

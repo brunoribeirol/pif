@@ -23,7 +23,7 @@ int main()
     fgets(Book1.title, 50, stdin); //scanf("%[ˆ\n]", Book1.title)
     fgets(Book1.author, 50, stdin);
     scanf("%d", &Book1.id);
-    scanf("%d", &Book1.price.reais); // i wrote &price.Book1.reais
+    scanf("%d", &Book1.price.reais); // I wrote &price.Book1.reais
     scanf("%d", &Book1.price.dollars);
 
     struct books Book2;
