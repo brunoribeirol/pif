@@ -29,7 +29,7 @@ int main() {
         printf("Enter information for Song %d:\n", i + 1);
 
         printf("Title: ");
-        scanf(" %[^\n]", musicCollection[i].details.title); // Read until newline
+        fgets(musicCollection[i].details.title, 100, stdin); // Read until newline
 
         printf("Artist: ");
         scanf(" %[^\n]", musicCollection[i].details.artist); // Read until newline
