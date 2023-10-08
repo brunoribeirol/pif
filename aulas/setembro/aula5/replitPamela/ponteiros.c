@@ -8,9 +8,9 @@ int main(void)
     int x = 12;
     int y = 7;
     int z[10];
-    int *ip = NULL;
+    int *ip = NULL; // ip é um ponteiro para inteiros; ip is a pointer to int
 
-    // ip aponta para o endereço de memória da variável x 
+    // ip aponta para o endereço de memória da variável x; ip now points to x
     ip = &x; 
     printf("Endereço de ip: %p\n", ip);
     printf("Valor de ip: %d\n", *ip);
@@ -18,20 +18,20 @@ int main(void)
 
     printf("\n");
 
-    // y recebe o valor apontado por ip (que é o valor de x)
+    // y recebe o valor apontado por ip (que é o valor de x); y is now the same value as x
     y = *ip; 
     printf("Novo valor da variável y: %d\n", y);
     printf("Valor da variável x: %d\n", x);
 
     printf("\n");
     
-    // altera o valor apontado por ip (altera x)
+    // altera o valor apontado por ip (altera x); changes x value
     *ip = 0;
     printf("Novo valor da variável x: %d\n", x);
 
     printf("\n");
 
-    // ip aponta para o primeiro elemento do array z
+    // ip aponta para o primeiro elemento do array z; ip now points to z[0]
     ip = &z[0];
     printf("Novo endereço de ip: %p\n", ip); // será um valor indefinido porque o array z ainda não foi definido
     printf("Valor de ip: %d\n", *ip); // será um valor indefinido porque o array z ainda não foi definido

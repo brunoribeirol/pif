@@ -41,25 +41,26 @@ int main(void)
     }
     
     return 0;
-    }
+}
 
-    void ordena(char **p, int n)
-    { 
-        char *temp;
+void ordena(char **p, int n)
+{
+    char *temp;
 
     //linhas de strings 
     for(int i = 0; i < n - 1; i++)
     {
         //próxima linha de strings
         for(int j = i + 1; j < n; j++)
-        { 
-        // verifica se a string da linha atual vem depois da próxima na ordem alfabética
-        if(strcmp(p[i], p[j]) > 0)
-        { 
-            temp = *(p + i);
-            *(p + i) = *(p + j);
-            *(p + j) = temp;
-        }
+        {
+
+            // verifica se a string da linha atual vem depois da próxima na ordem alfabética
+            if(strcmp(p[i], p[j]) > 0)
+            { 
+                temp = *(p + i);
+                *(p + i) = *(p + j);
+                *(p + j) = temp;
+            }
         }
     }
-    }
+}
