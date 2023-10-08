@@ -1,6 +1,7 @@
 // Create 2 variables and insert the following
 
 #include <stdio.h>
+#include <string.h> //acho que esqueci
 
 union value
 {
