@@ -13,7 +13,7 @@ int main(void)
     printf("Qual o tamanho do array: \n");
     scanf("%d", &len);
     arr = (int *)malloc(len * sizeof(int));
-    printf("%p\n", arr);
+    printf("%p\n", &arr);
 
     printf("Quais os elementos do array:\n");
     for (int i = 0; i < len; i++)
@@ -26,7 +26,7 @@ int main(void)
     for (int i = 0; i < len; i++)
     {
         printf("%d\t", arr[i]);
-        printf("%p\n", (arr + i));
+        printf("%p\n", (arr + i)); // Enderço do array e seus seguintes
     } // impressao dos elementos
 
     free(arr);

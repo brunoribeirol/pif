@@ -50,7 +50,7 @@ int main(void)
     printf("Valor do 2º endereço de memória de ip: %d\n", *(ip + 1));
     printf("Valor do 6º endereco de memoria de ip %d\n", *(ip + 5)); //z[6]
     printf("O valor do meu 10º elemento eh %d\n", z[9]);
-    printf("O valor do meu 12º elemento eh %d\n", z[11]); // é retornado um valor desconhecido porque o array z só comporta 10 espaços, z[10]
+    //printf("O valor do meu 12º elemento eh %d\n", z[11]); // é retornado um valor desconhecido porque o array z só comporta 10 espaços, z[10]
 
     return 0;
 

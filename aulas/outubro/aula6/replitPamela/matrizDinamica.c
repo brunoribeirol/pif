@@ -6,7 +6,8 @@
 int main(void)
 {
 
-    int linhas, colunas;
+    int linhas;
+    int colunas;
 
     printf("Digite as dimensoes de sua matriz\n");
     scanf("%d %d", &linhas, &colunas);

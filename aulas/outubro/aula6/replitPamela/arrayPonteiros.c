@@ -19,7 +19,7 @@ int main(void)
 
     while(1)
     {
-        printf("Digite um nome ou \\n para terminar: ");
+        printf("Digite um nome ou enter para terminar: ");
         fgets(nomes[n], TAM_MAX, stdin);
         if (strlen(nomes[n]) == 1) break;
         p[n] = nomes[n]; //o ponteiro p recebe a string fornecida pelo usuário
