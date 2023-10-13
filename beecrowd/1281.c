@@ -19,11 +19,11 @@ int main()
         int availableProducts;
         scanf("%d", &availableProducts);
 
-        Grocery* list = (Grocery*)malloc(availableProducts * sizeof(Grocery)); // Allocate memory for the product list
+        Grocery* list = (Grocery*)malloc(availableProducts * sizeof(Grocery));
 
         for (int j = 0; j < availableProducts; j++)
         {
-            scanf("%s %f", list[j].name, &list[j].price); // Read the name and price of each available product
+            scanf("%s %f", list[j].name, &list[j].price);
         }
 
             int productsToBuy;
@@ -33,19 +33,19 @@ int main()
 
             for (int k = 0; k < productsToBuy; k++)
             {
-                scanf("%s %d", list[k].name, &list[k].quantity); // Read the name and quantity of each product to buy
+                scanf("%s %d", list[k].name, &list[k].quantity);
 
                 for (int j = 0; j < availableProducts; j++)
                 {
-                    if (strcmp(list[k].name, list[j].name) == 0) // Compare the name of the list[k].name (productsToBuy) with the list[j].name (availableProducts) 
+                    if (strcmp(list[k].name, list[j].name) == 0)
                     {
-                        totalCost += list[j].price * list[k].quantity; // Calculate the cost for each product to buy
+                        totalCost += list[j].price * list[k].quantity;
                         break;
                     }
                 }
             } 
         printf("R$ %.2f\n", totalCost);
-        free(list); // Free the dynamically allocated memory
+        free(list);
     }
 
     return 0;
